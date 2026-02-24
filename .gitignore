@@ -1,0 +1,45 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# MacOS
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Uploads
+/uploads/
+
+# Other
+npm-debug.log*
+yarn-debug.log*
+package-lock.json
+
+# Temp files
+*.tmp
+
+# coverage
+coverage/
+
+# build
+dist/

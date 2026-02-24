@@ -1,0 +1,98 @@
+<% layout("/layouts/boilerplate") %>
+<body >
+    <style>
+        .filters{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2px;
+           margin-left: 2rem;
+           margin-top: 1rem;
+           align-items: center;
+           justify-content: center;
+        }
+        .filter{
+            text-align: center;
+            margin-right: 3rem;
+            opacity: 0.5;
+        }
+        .filter:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
+    </style>
+    
+   <div class="filters ">
+    
+    <div class="filter">
+             <div>
+                <div></div><i class="fa-solid fa-fire"></i></div>
+                <p>Trending</p>
+            </div>
+
+            <div class="filter">
+                <div><i class="fa-solid fa-mountain-sun"></i></div>
+                <p>Mountains</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-water"></i></div>
+                <p>Lakes</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-umbrella-beach"></i></div>
+                <p>Beachfront</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-city"></i></div>
+                <p>City</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-campground"></i></div>
+                <p>Camping</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-hotel"></i></div>
+                <p>Hotels</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-tree"></i></div>
+                <p>Cabins</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-person-swimming"></i></div>
+                <p>Pools</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-snowflake"></i></div>
+                <p>Ski-in/out</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-chess-rook"></i></div>
+                <p>Castles</p>
+            </div>
+    </div>
+
+    <div class="m-5">
+
+        
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1  ">
+            <%for (let listing of allListings){%>
+        <a style="text-decoration: none;" href="/listings/<%=listing._id%>">
+                    <div class="card col listing-card" >
+                        <img src="<%= listing.image.url%>" style="height: 20rem;"  class="card-img-top" alt="...">
+                        <div class="card-img-overlay"></div>
+                        <div class="card-body">
+                        <h2 class="card-title"><%=listing.title%></h2>
+                        <!-- <p class="card-text"><%=listing.description%></p> -->
+                        <h2>&#x20B9;<%=listing.price %></h2>
+                        <h3></h3>
+                        <!-- <a href="/listings/<%=listing._id%>" class="btn btn-primary"><%=listing.title %></a> -->
+                        </div>
+                </div>
+                </a>
+            <% }%>
+        </div>
+
+   </div>
+
+</body>
+

@@ -1,0 +1,53 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+
+    
+    <div class="row" >
+        <div class="col-8 offset-2">
+    <form method="POST"   action="/listings" class="needs-validation" novalidate enctype="multipart/form-data" >
+        <h3>Create a new listing</h3>
+        <div class="mb-3">
+            <label for="title" class="form-label">title</label>
+            <input name="listing[title]" class="form-control" placeholder="Enter title" id="title" type="text" required>
+            <div class="valid-feedback">Looks good</div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="description" class="form-label">description</label>
+            <textarea name="listing[description]" id="description" class="form-control" required  placeholder="Enter description" id="description" type="text"></textarea>
+            <div class="invalid-feedback">Enter valid description</div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="image" class="form-label" >Upload image</label>
+            <input required name="listing[image]"  class="form-control" id="image"  placeholder="Enter image url" type="file">
+        </div>
+        
+        <div class="row ">
+            <div class="mb-3 col-md-4" >
+                <label for="price" class="form-label">price</label>
+                <input required name="listing[price]" id="price" class="form-control"  placeholder="Enter price" type="text">
+                <div class="invalid-feedback">Enter valid price</div>
+            </div>
+
+            <div class="mb-3 col-md-8">
+                <label for="country" class="form-label">country</label>
+                <input  required name="listing[country]" id="country" class="form-control"  placeholder="Enter country" type="text">
+            </div>
+        </div>
+
+       
+       
+        <div class="mb-3">
+            <label for="location" class="form-label">location</label>
+            <input required name="listing[location]" id="location" class="form-control"  placeholder="Enter location" type="text">
+        </div>
+        
+        
+        <button class="add-btn btn btn-dark">add</button>
+        <br><br><br>
+    </form>
+    </div>
+</div>
+
+</body>
