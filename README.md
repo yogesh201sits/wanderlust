@@ -40,6 +40,3 @@ MAPBOX_TOKEN=<your Mapbox API token>
 SECRET=<session secret>
 ```
 
-## License
-
-MIT
